@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+#bodywrap{
+    width: 100%;
+    height: 100%;
+}
+#faqcontainer{
+    width: 90%;
+    background: white;
+    margin: 50px 5%;
+    padding-top: 30%;
+    padding-bottom: 10%;
+    border-radius: 5%;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+#faq{
+   width: 80%;
+   font-size: 12px;
+   text-align: center;
+   margin: 10px auto;
+}
+#faq.open{
+    font-size: 12px;
+}
+#faqimg{
+    width: 80%;
+    position: relative;
+    top: 140px;
+    left: 5%;
+}
+#faqimg2{
+    display: none;
+}
+#faqimgbox{
+    display: none;
+}
+#faqimg img{
+    width: 100%;
+}
+.faqs{
+    position: relative;
+    text-align: left;
+    font-weight: 400;
+    padding: 5%;
+    border-bottom: 1px solid  hsl(240, 5%, 91%);
+}
+.faqs.open{
+    font-weight: 700;
+}
+.questions{
+    display: flex;
+    text-align: left;
+    color:  hsl(238, 29%, 16%);
+    justify-content: space-between;
+    cursor: pointer;
+}
+.questions:hover{
+    color: hsl(14, 88%, 65%);
+}
+.questions span{
+    width: 3px;
+}
+.faqs.open .questions{
+    color: hsl(237, 12%, 33%);
+}
+.faqs.open .questions span img{
+    transform: rotate(180deg); /*up arrow*/
+}
+.answers{
+    padding: 0px 5%;
+    text-align: left;
+    color: hsl(240, 6%, 50%);
+    height: 0px;
+    overflow: hidden;
+}
+.faqs.open .answers{
+    transition: .5s;
+    font-weight: 400;
+    padding: 10px;
+    height: auto;
+    overflow: auto;
+}
+@media (min-width: 765px){
+    #faqcontainer{
+        width: 80%;
+        background: white;
+        margin: 50px 10%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        border-radius: 5%;
+        display: flex;
+        background-image: url("../images/bg-pattern-desktop.svg");
+        background-size: 75%;
+        background-repeat: no-repeat;
+        background-position: -30vw 70%;
+        overflow: hidden;
+    }
+    #faq{
+        width: 40%;
+        font-size: 12px;
+        text-align: left;
+     }
+     #faqimg{
+        display: none;
+        width: 80%;
+        position: relative;
+        top: 140px;
+        left: 5%;
+    }
+    #faqimg2{
+        display: block;
+        position: relative;
+        left: -7.5%;
+    }
+    #faqimg2 img{
+        width: 100%;
+    }
+    #faqimgbox{
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: 3.3%;
+        z-index: 10;
+    }
+    .faqs{
+        position: relative;
+        text-align: left;
+        font-weight: 400;
+        padding-left: 0;
+        border-bottom: 1px solid  hsl(240, 5%, 91%);
+    }
+}

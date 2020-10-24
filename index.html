@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+
+    <link rel="stylesheet" href="./style.css/main.css">
+    <script type="javascript" src="app.js/index.js"></script>
+    <style>
+        .attribution { font-size: 11px; text-align: center; padding: 10px; }
+        .attribution a { color: hsl(228, 45%, 44%); }
+      </style>
+</head>
+<body>
+    <div id="bodywrap">
+            <div id="faqimg"><img src="./images/illustration-woman-online-mobile.svg" alt=""></div>
+            <div id="faqimgbox"><img src="./images/illustration-box-desktop.svg" alt=""></div>
+        <div id="faqcontainer">
+            <div id="faqimg2"><img src="./images/illustration-woman-online-desktop.svg" alt=""></div>
+            <div id="faq">
+                <h1>FAQ</h1>
+                <div class="faqs">
+                    <div class="questions">How many team members can i invite?<span class="questdiv"><img src="./images/icon-arrow-down.svg" alt=""></span></div>
+                </div>
+                <div class="faqs">
+                    <div class="questions">What is the maximum file upload size?<span class="questdiv"><img src="./images/icon-arrow-down.svg" alt=""></span></div>
+                    <div class="answers">No more than 2GB. All files in your account must fit your allotted storage space.</div>
+                </div>
+                <div class="faqs">
+                    <div class="questions">How do i reset my password?<span class="questdiv"><img src="./images/icon-arrow-down.svg" alt=""></span></div>
+                </div>
+                <div class="faqs">
+                    <div class="questions">Can i cancel my subscription?<span class="questdiv"><img src="./images/icon-arrow-down.svg" alt=""></span></div>
+                </div>
+                <div class="faqs">
+                    <div class="questions">Do you provide additional support?<span class="questdiv"><img src="./images/icon-arrow-down.svg" alt=""></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Sir_ct</a>.
+          </div>
+    </div>
+    <script>
+        let quest = document.getElementsByClassName("questions")
+        let faq = document.getElementsByClassName("faqs");
+        
+    
+         for(i = 0; i<faq.length; i++){
+            faq[i].addEventListener("click", function(){
+                this.classList.toggle("open")
+            })
+           }
+    </script>
+</body>
+</html>
